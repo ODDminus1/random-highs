@@ -6,12 +6,14 @@ import ReactDOM from 'react-dom'
 
 let types = "instant,sorcery";
 let count = 4;
+let backendBaseUrl = 'https://random-highs-backend.herokuapp.com';
 
 class Layout extends Component {
+
   state = {cards: []};
 
   refreshCards() {
-    fetch('http://random-highs-backend.herokuapp.com/api/cards?numberOfCards=' + count + '&types=' + types)
+    fetch(backendBaseUrl + '/api/cards?numberOfCards=' + count + '&types=' + types)
       .then(res => res.json())
       .then((data) => {
         this.setState({cards: data})
@@ -25,8 +27,12 @@ class Layout extends Component {
     this.refreshCards()
   }
 
+  componentDidMount() {
+    this.refreshCards()
+  }
+
   refresh = () => {
-    fetch('https://random-highs-backend.herokuapp.com/api/cards?numberOfCards=' + count + '&types=' + types)
+    fetch(backendBaseUrl + '/api/cards?numberOfCards=' + count + '&types=' + types)
       .then(res => res.json())
       .then((data) => {
         this.setState({cards: data})
