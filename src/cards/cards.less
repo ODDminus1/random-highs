@@ -3,17 +3,64 @@
 @TupleMaxWidth: 22vw;
 @BorderRadius: 18px;
 
+@media screen {
+    @media (min-width: 769px) {
+        .cardTuple {
+            max-width: @TupleMaxWidth;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .cardImage {
+            max-width: @CardMaxWidth;
+            border-radius: @BorderRadius;
+        }
+        .pokerCardContainer {
+            margin-bottom: -30pc;
+        }
+
+        .magicCardContainer {
+            margin-top: 10vh;
+            background: none;
+        }
+    }
+}
+
+@media screen {
+    @media (max-width: 768px) {
+        .cardImage {
+            max-width: 35vw;
+            border-radius: 2vw;
+        }
+
+        .cardTuple {
+            max-width: 45vw;
+            margin: 1vw;
+            padding: 1.5vw;
+            border-radius: 2.5vw;
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+
+        }
+        .cardList {
+            width: 100%
+        }
+        .pokerCardContainer {
+            margin-right: -28.5vw;
+            margin-top: 2vw;
+        }
+        .magicCardContainer {
+            background: none;
+        }
+    }
+}
 .cardList {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    max-height: 100vh;
+    flex-direction: row;
+    max-height: 90vh;
     padding-top: 50px;
-}
-
-.cardImage {
-    max-width: @CardMaxWidth;
-    border-radius: @BorderRadius;
 }
 
 .cardTuple {
@@ -22,20 +69,8 @@
     border-width: medium;
     border-color: @TupleColor;
     border-style: solid;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 5px;
-    max-width: @TupleMaxWidth;
 }
 
-.pokerCardContainer {
-    margin-bottom: -30pc;
-}
-
-.magicCardContainer {
-    margin-top: 10vh;
-    background: none;
-}
 
 .cardContainer {
     float: left;
