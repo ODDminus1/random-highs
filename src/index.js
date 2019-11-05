@@ -24,7 +24,6 @@ class Layout extends Component {
     super(props)
     this.state = {cards: []};
     this.refresh = this.refresh;
-    this.refreshCards()
   }
 
   componentDidMount() {
