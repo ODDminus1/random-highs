@@ -19,13 +19,13 @@
 }
 @media screen and (max-width: 768px) {
   .cardImage {
-    max-width: 35vw;
+    max-width: 43vw;
     border-radius: 2vw;
   }
   .cardTuple {
-    max-width: 45vw;
-    margin: 1vw;
-    padding: 1.5vw;
+    max-width: 43vw;
+    margin: 0.5vw;
+    padding: 1vw;
     border-radius: 2.5vw;
     border-style: solid;
     border-color: black;
@@ -35,11 +35,11 @@
     width: 100%;
   }
   .pokerCardContainer {
-    margin-right: -28.5vw;
-    margin-top: 2vw;
+    margin-bottom: -38vh;
   }
   .magicCardContainer {
     background: none;
+    margin-top: 2vw;
   }
 }
 .cardList {
@@ -60,4 +60,4 @@
   float: left;
   max-width: 50vh;
 }
-/*# sourceMappingURL=cards.css.map */
+/*# sourceMappingURL=CardSection.css.map */

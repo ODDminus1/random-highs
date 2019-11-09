@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './index.css'
-import CardSection from './cards/cards'
+import './index.less'
+import CardSection from './cards/CardSection'
 import Navbar from './navbar/Navbar'
 import ReactDOM from 'react-dom'
 
@@ -23,7 +23,6 @@ class Layout extends Component {
   constructor(props) {
     super(props)
     this.state = {cards: []};
-    this.refresh = this.refresh;
   }
 
   componentDidMount() {
@@ -36,15 +35,22 @@ class Layout extends Component {
       .then((data) => {
         this.setState({cards: data})
       });
-    console.log("refreshed")
   }
 
   render() {
     return <div>
       <Navbar refresher={this.refresh}/>
       <CardSection cards={this.state.cards}/>
-    </div>
-      ;
+      <FieldToExpand />
+    </div>;
+  }
+}
+
+class FieldToExpand extends Component {
+  render() {
+    return (
+      <div id={'fieldToExpand'}/>
+    );
   }
 }
 

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import './Navbar.css'
-import '../cards/cards'
+import '../cards/CardSection'
 
 class Navbar extends Component {
   render() {
-    console.log(this.props)
     return (
       <div className={"navbar"}>
         <HomeButton refresher={this.props.refresher}/>
@@ -15,7 +14,6 @@ class Navbar extends Component {
 
 class HomeButton extends Component {
   render() {
-    console.log(this.props)
     return <button type={"button"} className={"refreshButton"} onClick={() => this.props.refresher()}>Refresh</button>
   }
 }
